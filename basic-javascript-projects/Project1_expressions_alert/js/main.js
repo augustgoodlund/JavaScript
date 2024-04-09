@@ -9,3 +9,6 @@ function My_First_Function() { //Defines a function and names it
     var str="This is the button text!"; //assigns button a string value
     document.getElementById("Button_Text").innerHTML=str; // uses button_text ID to put the button in the HTML file
 }
+function myFunction() {
+    alert("Page is loaded");
+  }
