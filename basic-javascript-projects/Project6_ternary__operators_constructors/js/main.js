@@ -21,17 +21,17 @@ function myFunction() {
     document.getElementById("Keywords_and_Constructors").innerHTML="Erik drives a " + Erik.Vehicle_Color + "-colored " + Erik.Vehicle_Model + " manufactured in " + Erik.Vehicle_Year;
 }
 
-function Breakfast(Fruit, Yogurt, Time) {
-    this.Breakfast_Fruit=Fruit;
-    this.Breakfast_Yogurt=Yogurt;
-    this.Breakfast_Time=Time;
+function Breakfast(Fruit, Yogurt, Time) { //creates the class and variables
+    this.Breakfast_Fruit=Fruit; //"this" statement which creates a blank object for Fruit variable
+    this.Breakfast_Yogurt=Yogurt; //"this" statement which creates a blank object for Yogurt variable
+    this.Breakfast_Time=Time; //"this" statement which creates a blank object for Time variable
 }
 
-var Berries=new Breakfast("blueberries", "vanilla", "11:00");
-var Apples=new Breakfast("apples", "coconut", "9:00");
-var Bananas=new Breakfast("bananas", "raspberry", "10:15");
+var Berries=new Breakfast("blueberries", "vanilla", "11:00"); //creates a new variable Berries
+var Apples=new Breakfast("apples", "coconut", "9:00"); //creates a new variable Apples
+var Bananas=new Breakfast("bananas", "raspberry", "10:15"); //creates a new variable Bananas
 
-function breakfastFunction() {
+function breakfastFunction() { //creates an ID for the HTML document as well as a format for the data to be presented in, using strings
     document.getElementById("New_and_This").innerHTML="Today for breakfast I had " + Berries.Breakfast_Fruit + " with " + Berries.Breakfast_Yogurt + " yogurt at " + Berries.Breakfast_Time;
 }
 function count_Function() { //main function
