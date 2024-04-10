@@ -34,3 +34,12 @@ var Bananas=new Breakfast("bananas", "raspberry", "10:15");
 function breakfastFunction() {
     document.getElementById("New_and_This").innerHTML="Today for breakfast I had " + Berries.Breakfast_Fruit + " with " + Berries.Breakfast_Yogurt + " yogurt at " + Berries.Breakfast_Time;
 }
+function count_Function() { //main function
+    document.getElementById("Counting").innerHTML=Count(); // ID for the HTML file
+    function Count() { // nested inner function
+        var Starting_point=9;
+        function Plus_one() {Starting_point += 1;} //second nested inner function
+        Plus_one();
+        return Starting_point; //the output of this code would be "10" -the Plus_One() function is nested
+    }
+}
