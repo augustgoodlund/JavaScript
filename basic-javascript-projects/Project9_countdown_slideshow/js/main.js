@@ -4,7 +4,12 @@ function countdown() { //creates and names the function
 function tick() { //creates and names the nested inner function
   seconds=seconds-1; //creates variable with an interval that decreases by 1
 timer.innerHTML=seconds; //sets variable "seconds" as the timer
-    var time=setTimeout(showslides, 10000); //sets the timeout at 10 seconds
+    var time=setTimeout(tick, 1000); //sets the timeout at 1 second
+    if (seconds == -1) {
+        alert("Please click the three dots at the bottom of this page");
+        clearTimeout(time);
+        timer.innerHTML=""
+    }
 }
 tick();
 }
