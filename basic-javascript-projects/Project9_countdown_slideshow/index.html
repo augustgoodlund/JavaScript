@@ -5,7 +5,7 @@
 <script src="js/main.js"></script>
 <link rel="stylesheet" type="text/css" href="css/main.css"
 </head>
-<body>
+<body onload="countdown()">
 <!--Images and slides -->
     <div class="slideshow-container">
         <div class="mySlides fade">
@@ -25,13 +25,13 @@
         </div>
 <!--Buttons-->
 <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-<a class="next" onclick="plusSlides(1)">&#10095;</a>
+<a class="next" onclick="plusSlides(1); countdown()">&#10095;</a>
 </div>
 <br>
 <!--Circles-->
 <div style="text-align:center">
-<span class="dot" onclick="currentSlide(1)"></span>
-<span class="dot" onclick="currentSlide(2)"></span>
+<span class="dot" onclick="currentSlide(1); countdown()"></span>
+<span class="dot" onclick="currentSlide(2); countdown()"></span>
 <span class="dot" onclick="currentSlide(3)"></span>
 </div>
 </body>
