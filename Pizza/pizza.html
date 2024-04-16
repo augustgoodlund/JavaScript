@@ -2,14 +2,52 @@
 <html lang="en">
 <head>
 <title>Pizza Drill Demo</title>
-<meta charset="UTF-8">
-<meta name='description' content='A basic HTML, CSS and JavaScript Calculator'>
+<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
 <meta name="author" content="Your Name Here...">
 <script src="js/pizza.js" defer></script>
 <link rel="stylesheet" type="text/css" href="css/pizza.css">
 </head>
 <html>
     <body>
-        
+       <div id="menuBG">
+        <h1 style="margin:0 0px 0 20px;">Pizza Drill Tutorial</h1>
+        <input id="btnOrder" type="button" onclick="getReceipt()"
+        value="Place Order">
+        <form id="frmMenu">
+            <div class="menu left">
+                <h3>Size:</h3>
+                <input class="size" type="radio" name="Size"
+                value="Slice">Slice<br>
+                <input class="size" type="radio" name="Size"
+                value="Small Pizza">Small Pizza<br>
+                <input class="size" type="radio" name="Size"
+                value="Medium Pizza">Medium Pizza<br>
+                <input class="size" type="radio" name="Size"
+                value="Large Pizza">Large Pizza<br>
+                <input class="size" type="radio" name="Size"
+                value="Extra Large Pizza">Extra Large Pizza<br>
+            </div>
+            <div class="menu right">
+                <h3>Proteins</h3>
+                <input class="toppings" type="checkbox" name="Topping"
+                value="Seitan">Seitan Steak<br>
+                <input class="toppings" type="checkbox" name="Topping"
+                value="Soycurl">BBQ Soycurls<br>
+                <input class="toppings" type="checkbox" name="Topping"
+                value="Tofu">Smoked Tofu<br>
+                <input class="toppings" type="checkbox" name="Topping"
+                value="Tempeh">Peppered Tempeh Sausage<br>
+                <input class="toppings" type="checkbox" name="Topping"
+                value="Chickpeas">Buffalo Chickpeas<br>
+                <input class="toppings" type="checkbox" name="Topping"
+                value="Beyond">Chipotle Beyond Beef<br>
+            </div>
+            <div id="cart">
+                <div id="showText"></div>
+                <div id="totalPrice"></div>
+            </div>
+        </form>
+       </div> 
     </body>
 </html>
