@@ -32,13 +32,13 @@ function placeXOrO(squareNumber) {
             activePlayer='X';
         }
         //this function plays placement sound
-        Audio('./medi/place.mp3');
+        Audio('./media/place.mp3');
         //this condition checks to see if it is the computer's turn
         if (activePlayer==='O') {
             //this function disables clicking for computer's turn
             disableClick();
             //this function waits 1 second before the computer places an image and enables click.
-            setTimeout(function () {computersTurn();}, 1000);
+            setTimeout(function () { computersTurn(); }, 1000);
         }
         //returning true is needed for our computersTurn() function to work
         return true;
@@ -46,19 +46,19 @@ function placeXOrO(squareNumber) {
     //this function results in a random square being selected by the computer
     function computersTurn() {
         //this boolean is needed for our while loop
-        let success=false;
+        let success  =false;
         //this variable stores a random number 0-8
         let pickASquare;
         //this condition allows our while loop to keep trying of a square is selected already
         while (!success) {
             //a random number between 0 and 8 is selected
-            pickASquare=String(Math.floor(Math.random()*9));
+            pickASquare=String(Math.floor(Math.random() * 9));
             //if the random number evaluated returns true, the square hasn't been selected yet
             if (placeXOrO(pickASquare)) {
                 //this line calls the function
                 placeXOrO(pickASquare);
                 //this changes our boolean and ends the loop
-                success=true;
+                success = true;
             };
         }
     }
@@ -70,6 +70,8 @@ function checkWinConditions() {
     if (arrayIncludes('0X', '1X', '2X')) { drawWinLine(50, 100, 558, 100) }
     // X 3, 4, 5 condition
     else if (arrayIncludes('3X', '4X', '5X')) { drawWinLine(50, 304, 558, 304) }
+    // X 2, 5, 8 condition
+    else if (arrayIncludes('2X', '5X', '8X')) { drawWinLine(508, 50, 508, 558) }
     // X 6, 7, 8 condition
     else if (arrayIncludes('6X', '7X', '8X')) { drawWinLine(50, 508, 558, 508) }
     // X 0, 3, 6 condition
