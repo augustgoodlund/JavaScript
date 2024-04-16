@@ -99,9 +99,9 @@ function checkWinConditions() {
     //this condition checks for a tie. if none of the above conditions are met and 9 squares are selected the code executes.
     else if (selectedSquares.length >= 9) {
         //this function plays the tie game sound
-        audio('./media/tie.mp3');
-        //this function sets a .3 second timer before the resetGame is called
-        setTimeout(function () { resetGame(); }, 500);
+        audio('./media/tie.wav');
+        //this function sets a 5 second timer before the resetGame is called
+        setTimeout(function () { resetGame(); }, 3000);
     }
     //this function checks if an array includes 3 strings. it is used to check for each win condition
     function arrayIncludes(squareA, squareB, squareC) {
@@ -191,11 +191,11 @@ function drawWinLine(coordX1, coordY1, coordX2, coordY2) {
     //this line disallows clicking wihle the win sound is playing
     disableClick();
     //this line plays the win sounds
-    audio('./media/winGame.mp3');
+    audio('./media/winGame.wav');
     //this line calls main animation loop
     animateLineDrawing();
-    //this line waits 1 second, then clears the canvas, resets game, and allows clicking
-    setTimeout(function () { clear(); resetGame(); }, 1000);
+    //this line waits 3 seconds, then clears the canvas, resets game, and allows clicking
+    setTimeout(function () { clear(); resetGame(); }, 3000);
 }
 //this function resets the game after a tie or win
 function resetGame() {

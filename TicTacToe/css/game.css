@@ -18,7 +18,7 @@ td {
     /*changes curser to index finger hand on hover */
     cursor: pointer;
     /*sets table border style */
-    border: 4px solid rgba(3, 61, 252, 0.8);
+    border: 4px solid rgba(1, 3, 10, 0.8);
     /*removes default padding */
     padding: 0px;
     width: 200px;
